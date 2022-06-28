@@ -18,6 +18,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v2
+      - name: Install font
+        run: sudo apt install fonts-noto
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
