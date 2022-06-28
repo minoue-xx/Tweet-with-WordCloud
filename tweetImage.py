@@ -5,13 +5,13 @@ def tweetWithImage(status, path2image):
     import tweepy
     from os import getenv
     
-    consumer_key = getenv('consumer_key')
-    consumer_secret = getenv('consumer_secret')
-    access_token = getenv('access_token')
-    access_token_secret = getenv('access_token_secret') 
+    consumerkey = getenv('CONSUMERKEY');
+    consumersecret = getenv('CONSUMERSECRET');
+    accesstoken = getenv('ACCESSTOKEN');
+    accesstokensecret = getenv('ACCESSTOKENSECRET');
     
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
+    auth = tweepy.OAuthHandler(consumerkey, consumersecret)
+    auth.set_access_token(accesstoken, accesstokensecret)
     
     api = tweepy.API(auth)
     
