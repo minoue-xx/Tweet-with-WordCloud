@@ -30,6 +30,8 @@ jobs:
         run: pip install -r requirements.txt
       - name: Set up MATLAB
         uses: matlab-actions/setup-matlab@v1
+        with:
+          release: 'R2023a'
       - name: Run script and tweet
         uses: matlab-actions/run-command@v1
         env:
